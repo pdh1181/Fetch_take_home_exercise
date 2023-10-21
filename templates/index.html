@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Home test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .result-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="date"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch Machine Learning Engineer Take Home Test</h1>
+    <p>
+        At Fetch, we are monitoring the number of scanned receipts to our app on a daily basis as one of our KPIs.
+        From a business standpoint, we sometimes need to predict the possible number of scanned receipts for a given
+        future month.
+    </p>
+
+    <p>
+        The following link provides the number of observed scanned receipts each day for the year 2021. Based on this
+        prior knowledge, please develop an algorithm which can predict the approximate number of scanned receipts for
+        each month of 2022.
+    </p>
+
+    <form action="/" method="post">
+        <label for="date">Enter Date:</label>
+        <input type="date" id="date" name="date" min="2022-01-01" max="2022-12-31" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+    <div class="result-container">
+        <h2>Prediction of Receipt Count on {{ date }} is {{ result }}</h2>
+    </div>
+    {% endif %}
+</body>
+
+</html>
+
