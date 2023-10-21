@@ -24,7 +24,7 @@ After running the notebook and obtaining a trained model, execute the following 
 python3 ml_engg.py
 ```
 
-###Flask Web Application
+### Flask Web Application
 
 To run the Flask web application, use the following command:
 ```
